@@ -1,0 +1,9 @@
+PUT http://localhost:3333/users/1
+content-type: application/json
+
+{
+    "firstName": "hector",
+    "age": 29
+}
+
+
