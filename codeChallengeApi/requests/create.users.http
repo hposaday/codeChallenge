@@ -1,0 +1,10 @@
+POST http://localhost:3333/users
+content-type: application/json
+
+{
+    "first_name": "Bob",
+    "last_name": "Smith",
+    "email": "bsmith@test.com",
+    "age": 25,
+    "occupation": "developer"
+}
