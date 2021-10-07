@@ -5,10 +5,10 @@ export default class User extends BaseModel {
   @column({ isPrimary: true })
   public id: number
 
-  @column()
+  @column({ serializeAs: 'firstName' })
   public firstName: string
 
-  @column()
+  @column({ serializeAs: 'lastName' })
   public lastName: string
 
   @column()
@@ -20,9 +20,9 @@ export default class User extends BaseModel {
   @column()
   public occupation: string
 
-  @column.dateTime({ autoCreate: true })
+  @column.dateTime({ serializeAs: null, autoCreate: true })
   public createdAt: DateTime
 
-  @column.dateTime({ autoCreate: true, autoUpdate: true })
+  @column.dateTime({ serializeAs: null, autoCreate: true, autoUpdate: true })
   public updatedAt: DateTime
 }

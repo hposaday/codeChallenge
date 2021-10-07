@@ -1,0 +1,42 @@
+<div>
+  <mat-grid-list cols="2" rowHeight="1:1">
+    <mat-grid-tile>
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Code Review Flow</mat-card-title>
+        </mat-card-header>
+        <img
+          mat-card-image
+          src="./../../assets/img/code-review.png"
+          alt="code review flow"
+          width="auto"
+          height="500"
+        />
+        <mat-card-content>
+          <ul>
+            <li *ngFor="let step of codeReviewFlowSteps">{{ step }}</li>
+          </ul>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Why Code Review?</mat-card-title>
+        </mat-card-header>
+        <img
+          mat-card-image
+          src="./../../assets/img/why-code-review.png"
+          alt="why code review"
+          width="1"
+          height="500"
+        />
+        <mat-card-content>
+          <ul>
+            <li *ngFor="let reason of codeReviewReasons">{{ reason }}</li>
+          </ul>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

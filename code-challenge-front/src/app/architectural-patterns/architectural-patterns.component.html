@@ -1,0 +1,18 @@
+<div>
+  <mat-grid-list cols="1" rowHeight="2.2:0.9">
+    <mat-grid-tile *ngFor="let architecturalPattern of architecturalPatterns">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>{{ architecturalPattern.title }}</mat-card-title>
+        </mat-card-header>
+        <img
+          mat-card-image
+          src="{{ architecturalPattern.src }}"
+          alt="{{ architecturalPattern.alt }}"
+          width="auto"
+          height="{{ architecturalPattern.height }}"
+        />
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

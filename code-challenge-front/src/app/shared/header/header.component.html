@@ -1,0 +1,9 @@
+<mat-toolbar color="primary">
+  <button
+    *ngFor="let button of menuButtons"
+    [routerLink]="button.route"
+    mat-button
+  >
+    {{ button.text }}
+  </button>
+</mat-toolbar>

@@ -1,0 +1,18 @@
+<div>
+  <mat-grid-list cols="1" rowHeight="2.2:0.9">
+    <mat-grid-tile *ngFor="let data of oopData">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>{{ data.title }}</mat-card-title>
+        </mat-card-header>
+        <img
+          mat-card-image
+          src="{{ data.src }}"
+          alt="{{ data.alt }}"
+          width="auto"
+          height="{{ data.height }}"
+        />
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

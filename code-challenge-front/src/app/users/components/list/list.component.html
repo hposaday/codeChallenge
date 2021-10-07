@@ -1,0 +1,28 @@
+<div>
+  <mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile *ngFor="let user of users$ | async">
+      <mat-card class="user-card">
+        <mat-card-header>
+          <mat-card-title
+            >{{ user.firstName }} {{ user.lastName }}
+          </mat-card-title>
+          <mat-card-subtitle>{{ user.occupation }}</mat-card-subtitle>
+          <button
+            mat-icon-button
+            color="primary"
+            routerLink="edit/{{ user.id }}"
+          >
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" (click)="deleteUser(user)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{ user.age }}</p>
+          <p>{{ user.email }}</p>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
